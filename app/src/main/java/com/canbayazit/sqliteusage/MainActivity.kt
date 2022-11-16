@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-       val kisiListe = Kisilerdao().tumKisiler(vt)
+      // val kisiListe = Kisilerdao().tumKisiler(vt)
 
 
        // val kisiListe = Kisilerdao().arama(vt,"ah")                                              ARAMA
@@ -44,15 +44,15 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        for (k in kisiListe){
+        //for (k in kisiListe){
 
-            Log.e("Kişi no",(k.kisi_no).toString())
-            Log.e("Kişi ad",k.kisi_ad)
-            Log.e("Kişi tel",k.kisi_tel)
-            Log.e("Kişi yaş",(k.kisi_yas).toString())
-            Log.e("Kişi boy",(k.kisi_boy).toString())
+          //  Log.e("Kişi no",(k.kisi_no).toString())
+         //   Log.e("Kişi ad",k.kisi_ad)
+         //   Log.e("Kişi tel",k.kisi_tel)
+       //     Log.e("Kişi yaş",(k.kisi_yas).toString())
+         //   Log.e("Kişi boy",(k.kisi_boy).toString())
 
-        }
+     //   }
 
 
     }

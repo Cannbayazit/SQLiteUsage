@@ -166,7 +166,7 @@ class Kisilerdao {
     fun tumGetir(vt: VeriTabaniYardimcisi,kisi_no:Int): Kisiler? {
 
 
-       var gelenKisi:Kisiler? = null
+       var gelenKisi3:Kisiler? = null
 
         val db = vt.writableDatabase
 
@@ -174,7 +174,7 @@ class Kisilerdao {
 
         while (cursor.moveToNext()) {
 
-            gelenKisi = Kisiler(
+            gelenKisi3 = Kisiler(
                 cursor.getInt(cursor.getColumnIndex("kisi_no")),
                 cursor.getString(cursor.getColumnIndex("kisi_ad")),
                 cursor.getString(cursor.getColumnIndex("kisi_tel")),
@@ -185,7 +185,7 @@ class Kisilerdao {
 
         }
 
-        return gelenKisi
+        return gelenKisi3
 
     }
 
