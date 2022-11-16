@@ -17,8 +17,22 @@ class MainActivity : AppCompatActivity() {
        // Kisilerdao().kisiGuncelle(vt,3,"Ahmet",1111111,28,1.88)           GÜNCELLEME
           //  Kisilerdao().kisiSil(vt,2)                                                                         SİLME
 
-        val sonuc = Kisilerdao().kayitKontrol(vt,"mehmet")
-        Log.e("Kayıt kontrol", sonuc.toString())
+     //   val sonuc = Kisilerdao().kayitKontrol(vt,"mehmet")
+      //  Log.e("Kayıt kontrol", sonuc.toString())
+
+        val kisi = Kisilerdao().tumGetir(vt,3)
+
+        if(kisi != null){
+
+            Log.e("Kişi no 3",(kisi.kisi_no).toString())
+            Log.e("Kişi ad 3",kisi.kisi_ad)
+            Log.e("Kişi tel 3",kisi.kisi_tel)
+            Log.e("Kişi yaş 3",(kisi.kisi_yas).toString())
+            Log.e("Kişi boy 3" , (kisi.kisi_boy).toString())
+
+
+
+        }
 
        val kisiListe = Kisilerdao().tumKisiler(vt)
 

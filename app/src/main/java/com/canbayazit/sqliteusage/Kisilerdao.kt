@@ -116,6 +116,7 @@ class Kisilerdao {
     }
 
         // veri tabanı tüm verileri getime işlemi
+
     @SuppressLint("Range")
     fun tumKisiler(vt: VeriTabaniYardimcisi): ArrayList<Kisiler> {
 
@@ -159,6 +160,32 @@ class Kisilerdao {
 
         return sonuc
 
+
+    }
+    @SuppressLint("Range")
+    fun tumGetir(vt: VeriTabaniYardimcisi,kisi_no:Int): Kisiler? {
+
+
+       var gelenKisi:Kisiler? = null
+
+        val db = vt.writableDatabase
+
+        val cursor = db.rawQuery("select * from kisiler where kisi_no = $kisi_no", null)
+
+        while (cursor.moveToNext()) {
+
+            gelenKisi = Kisiler(
+                cursor.getInt(cursor.getColumnIndex("kisi_no")),
+                cursor.getString(cursor.getColumnIndex("kisi_ad")),
+                cursor.getString(cursor.getColumnIndex("kisi_tel")),
+                cursor.getInt(cursor.getColumnIndex("kisi_yas")),
+                cursor.getDouble(cursor.getColumnIndex("kisi_boy"))
+            )
+
+
+        }
+
+        return gelenKisi
 
     }
 
